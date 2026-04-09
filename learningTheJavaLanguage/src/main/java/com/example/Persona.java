@@ -6,16 +6,21 @@ import lombok.ToString;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.StringJoiner;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 
 @Getter @Setter
-@ToString
+//@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Persona{
+	/*
+	 * Los elemntos de una clase existen en el plano de la clase o de las instancias
+	 */
+	
 	/*
 	 * protected: Lo ven todas las clases del mismo paquete Y 
 	 * también cualquier clase hija, sin importar en qué paquete o carpeta esté
@@ -33,6 +38,7 @@ public class Persona{
 	private Genero genero;
 	private LocalDate fechaNacimiento;
 	private double salary;
+	public static final String PAIS = "España";
 	
 	
 	// ............................ Constructors .......................................
@@ -55,6 +61,16 @@ public class Persona{
 	    return nombre + " " + primerApellido + " " + segundoApellido + " " + salary;
 	}
 */
+	@Override
+	public String toString() {
+	    StringJoiner sj = new StringJoiner(", ", Persona.class.getSimpleName() + "[", "]");
+	    if (nombre != null) sj.add("nombre='" + nombre + "'");
+	    if (primerApellido != null) sj.add("primerApellido='" + primerApellido + "'");
+	    if (segundoApellido != null) sj.add("segundoApellido='" + segundoApellido + "'");
+	    if (salary != 0.0) sj.add("salary=" + salary);
+	    // ... repetir para cada campo
+	    return sj.toString();
+	}
 
 
 
