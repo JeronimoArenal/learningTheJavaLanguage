@@ -55,12 +55,6 @@ public class Persona{
 	 * bloque de código reutilizable que realiza una tarea específica y solo se ejecuta cuando es invocado. 
 	 */
 	
-/*	@Override
-	public String toString() {
-	    // Retorna: nombre primerApellido segundoApellido salary
-	    return nombre + " " + primerApellido + " " + segundoApellido + " " + salary;
-	}
-*/
 	@Override
 	public String toString() {
 	    StringJoiner sj = new StringJoiner(", ", Persona.class.getSimpleName() + "[", "]");
@@ -68,7 +62,6 @@ public class Persona{
 	    if (primerApellido != null) sj.add("primerApellido='" + primerApellido + "'");
 	    if (segundoApellido != null) sj.add("segundoApellido='" + segundoApellido + "'");
 	    if (salary != 0.0) sj.add("salary=" + salary);
-	    // ... repetir para cada campo
 	    return sj.toString();
 	}
 

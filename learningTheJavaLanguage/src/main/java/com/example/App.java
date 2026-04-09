@@ -21,6 +21,8 @@ public class App {
 	 * con final.- constantes globales.
 	 */
 	
+	
+	
     public static void main(String[] args) {
 
     	var persona1 = new Persona("Jerónimo", "Arenal", "Gómez", 2500.0);
@@ -44,8 +46,16 @@ public class App {
     	
     	System.out.println(Persona.PAIS);
     	
-    	System.out.println(app1.texto);
-    	
+    	// Creamos objeto para imprimir y luego se marca para que lo destruya con el Garbage Collector
+    	System.out.println(new App().texto);
 
+        // Lo mismo con el metodo obtenerTexto
+        System.out.println(new App().obtenerTexto());
+    	
+    }
+    
+	
+    public String obtenerTexto() {
+        return texto;
     }
 }
