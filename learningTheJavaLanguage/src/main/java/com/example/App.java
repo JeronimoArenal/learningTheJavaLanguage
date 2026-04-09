@@ -12,10 +12,26 @@ public class App {
 	 */
 	
     public static void main(String[] args) {
-    	
+    	/*
+    	 * Instanciacion de objetos utilizando Builder. Es un patrón creaccional, que nos permite crear
+    	 * objetos aunque no tengamos el constructor implementado, pudiendo utilizar las propiedades de 
+    	 * la clase de forma indiferente
+    	 */
+
     	var persona1 = new Persona("Jerónimo", "Arenal", "Gómez", 2500.0);
+    	Persona persona2 = Persona.builder().salary(2500.0)
+    			.nombre("Jerónimo")
+    			.primerApellido("Arenal")
+    			.build();
+    	Persona persona3 = Persona.builder().salary(2500.0)
+    			.nombre("Jerónimo")
+    			.primerApellido("Arenal")
+    			.genero(Genero.FEMENINO)
+    			.build();
     	
     	System.out.println(persona1);
+    	System.out.println(persona2);
+    	System.out.println(persona3);
     	
 
     }

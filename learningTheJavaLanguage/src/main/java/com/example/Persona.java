@@ -2,6 +2,7 @@ package com.example;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
@@ -10,10 +11,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 
 @Getter @Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class Persona{
 	/*
 	 * protected: Lo ven todas las clases del mismo paquete Y 
@@ -48,12 +49,12 @@ public class Persona{
 	 * bloque de código reutilizable que realiza una tarea específica y solo se ejecuta cuando es invocado. 
 	 */
 	
-	@Override
+/*	@Override
 	public String toString() {
 	    // Retorna: nombre primerApellido segundoApellido salary
 	    return nombre + " " + primerApellido + " " + segundoApellido + " " + salary;
 	}
-
+*/
 
 
 
