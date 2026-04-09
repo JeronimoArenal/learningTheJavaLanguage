@@ -13,6 +13,10 @@ public class App {
 	
     public static void main(String[] args) {
     	
+    	var persona1 = new Persona("Jerónimo", "Arenal", "Gómez", 2500.0);
+    	
+    	System.out.println(persona1);
+    	
 
     }
 }

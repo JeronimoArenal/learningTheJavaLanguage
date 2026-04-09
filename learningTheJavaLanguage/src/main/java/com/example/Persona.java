@@ -1,5 +1,19 @@
 package com.example;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+
 public class Persona{
 	/*
 	 * protected: Lo ven todas las clases del mismo paquete Y 
@@ -15,10 +29,18 @@ public class Persona{
 	private String nombre;
 	private String primerApellido;
 	private String segundoApellido;
+	private Genero genero;
+	private LocalDate fechaNacimiento;
 	private double salary;
 	
 	
 	// ............................ Constructors .......................................
+	public Persona(String nombre, String primerApellido, String segundoApellido, double salary) {
+		this.nombre = nombre;
+		this.primerApellido = primerApellido;
+		this.segundoApellido = segundoApellido;
+		this.salary = salary;
+	}
 	
 	
 	// ............................ M E T H O D S .......................................
@@ -26,6 +48,14 @@ public class Persona{
 	 * bloque de código reutilizable que realiza una tarea específica y solo se ejecuta cuando es invocado. 
 	 */
 	
+	@Override
+	public String toString() {
+	    // Retorna: nombre primerApellido segundoApellido salary
+	    return nombre + " " + primerApellido + " " + segundoApellido + " " + salary;
+	}
+
+
+
 
 
 	
