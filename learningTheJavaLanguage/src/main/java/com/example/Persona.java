@@ -20,49 +20,13 @@ public class Persona{
 	
 	// ............................ Constructors .......................................
 	
-	public Persona() {
-		
-	}
-	
-	public Persona(String nombre, String primerApellido, String segundoApellido) {
-		this.nombre = nombre;
-		this.primerApellido = primerApellido;
-		this.segundoApellido = segundoApellido;
-	}
-		
 	
 	// ............................ M E T H O D S .......................................
 	/*
 	 * bloque de código reutilizable que realiza una tarea específica y solo se ejecuta cuando es invocado. 
 	 */
 	
-	
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		// "this.nombre" se refiere a la variable privada de arriba
-		// "nombre" es lo que recibes por paréntesis
-		this.nombre = nombre;
-	}
-	public String getPrimerApellido() {
-		return primerApellido;
-	}
-	public void setPrimerApellido(String primerApellido) {
-		this.primerApellido = primerApellido;
-	}
-	public String getSegundoApellido() {
-		return segundoApellido;
-	}
-	public void setSegundoApellido(String segundoApellido) {
-		this.segundoApellido = segundoApellido;
-	}
-	
-	@Override
-	public String toString() {
-	    return nombre + " " + primerApellido + " " + segundoApellido ;
-	}
-	
+
 
 	
 	

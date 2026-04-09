@@ -13,17 +13,6 @@ public class App {
 	
     public static void main(String[] args) {
     	
-    	Persona persona1 = new Persona();
-    	persona1.setNombre("Jerónimo");
-    	persona1.setPrimerApellido("Arenal");
-    	persona1.setSegundoApellido("Gómez");
-    	var family = new Persona("Esther", "Arenal", "Martínez");
-    	var family1 = new Persona("Miguel", "Arenal", "Martinez");
-    	
-    	System.out.print("Me llamo: " + "\n" + persona1.getNombre() +' ' + persona1.getPrimerApellido() + ' ' +
-    			persona1.getSegundoApellido() + "\n"); 
-    	System.out.println(family);
-    	System.out.println(family1);
 
     }
 }
