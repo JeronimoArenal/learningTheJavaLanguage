@@ -1,6 +1,6 @@
 package com.example;
 
-public class Persona {
+public class Persona{
 	/*
 	 * protected: Lo ven todas las clases del mismo paquete Y 
 	 * también cualquier clase hija, sin importar en qué paquete o carpeta esté
@@ -15,19 +15,26 @@ public class Persona {
 	private String nombre;
 	private String primerApellido;
 	private String segundoApellido;
+	private double salary;
 	
 	
-  /*  public void setNombre(String nuevoNombre) {
-        // "this.nombre" se refiere a la variable privada de arriba
-        // "nuevoNombre" es lo que recibes por paréntesis
-        this.nombre = nuevoNombre;
-    }
+	// ............................ Constructors .......................................
 	
+	public Persona() {
+		
+	}
 	
-    public String getNombre() {
-        return nombre; 
-    }
-	*/
+	public Persona(String nombre, String primerApellido, String segundoApellido) {
+		this.nombre = nombre;
+		this.primerApellido = primerApellido;
+		this.segundoApellido = segundoApellido;
+	}
+		
+	
+	// ............................ M E T H O D S .......................................
+	/*
+	 * bloque de código reutilizable que realiza una tarea específica y solo se ejecuta cuando es invocado. 
+	 */
 	
 	
 	public String getNombre() {
@@ -49,6 +56,11 @@ public class Persona {
 	}
 	public void setSegundoApellido(String segundoApellido) {
 		this.segundoApellido = segundoApellido;
+	}
+	
+	@Override
+	public String toString() {
+	    return nombre + " " + primerApellido + " " + segundoApellido ;
 	}
 	
 
