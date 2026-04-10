@@ -6,17 +6,35 @@ import java.time.Month;
 public class App {
 	
     public static void main(String[] args) {
-    	Empleado empleado1 = new Empleado();
-    	Empleado empleado2 = new Empleado(3600.00, Dpto.CONTABILIDAD, LocalDate.of(2026, Month.MAY, 22));
-    	empleado1.setNombre("Jeronimo");
     	
-    	System.out.println(empleado1);
+    	Empleado empleado = Empleado.builder()
+	            .salario(2750.0)
+	            .dpto(Dpto.CONTABILIDAD)
+	            .fecha_alta(LocalDate.now())
+	            .ssn("123-456-789")
+	            .build();
     	
-    	Empleado empleado3 = new Empleado("Juan", "Martínez", "Lopez", Genero.MASCULINO, 
-    			LocalDate.of(2026, Month.MAY, 22), 5000.0, Dpto.FINANZAS, 
-    			LocalDate.of(2026,Month.APRIL, 12));
+    	System.out.println(empleado);
+    			
     	
-    	System.out.print(empleado3);
+    	 Empleado empleado3 = Empleado.builder()
+    	            // Atributos de Persona
+    	            .nombre("Jerónimo")
+    	            .primerApellido("Arenal")
+    	            .segundoApellido("Gómez")
+    	            .genero(Genero.FEMENINO)
+    	            .fechaNacimiento(LocalDate.of(1969, Month.MAY, 22))
+    	            
+    	            // Atributos de Empleado
+    	            .salario(2750.0)
+    	            .dpto(Dpto.CONTABILIDAD)
+    	            .fecha_alta(LocalDate.now())
+    	            .ssn("123-456-789")
+    	            
+    	            //Creamos el objeto
+    	            .build();
+
+    	    System.out.println(empleado3);
 
     }
 }

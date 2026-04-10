@@ -2,45 +2,32 @@ package com.example;
 
 import java.time.LocalDate;
 
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
+
 /*
  * Empleado hereda de Persona, es deicr, es una subclase de Persona. Tambien se puede decir que Empleado es un 
  * subtipo de Persona
  */
-
+@Getter @Setter 
+@EqualsAndHashCode(callSuper = false)
+@ToString(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
 public class Empleado extends Persona{
 	
 	private double salario;
 	private Dpto dpto;
 	private LocalDate fecha_alta;
+	private String ssn;
 	
 	//............................. Constructors ...................................
-	public Empleado() {
-		super();
-	}
-
-	public Empleado(double salario, Dpto dpto, LocalDate fecha_alta) {
-		super();
-		this.salario = salario;
-		this.dpto = dpto;
-		this.fecha_alta = fecha_alta;
-	}
-
-	public Empleado(String nombre, String primerApellido, String segundoApellido, Genero genero,
-			LocalDate fechaNacimiento, 
-			double salario, Dpto dpto, LocalDate fecha_alta) {
-		super(nombre, primerApellido, segundoApellido, genero, fechaNacimiento);
-		this.salario = salario;
-		this.dpto = dpto;
-		this.fecha_alta = fecha_alta;
-	}
-
-	@Override
-	public String toString() {
-	    return "Empleado [" + super.toString() + ", salario=" + salario + 
-	           ", dpto=" + dpto + ", fecha_alta=" + fecha_alta + "]";
-	}
-	
-	
 	
 	/*
 	@Override
@@ -58,6 +45,16 @@ public class Empleado extends Persona{
 	           ", fecha_alta=" + fecha_alta + "]";
 	}
 	*/
-	
 
+	//.................................. toString ..........................................
+/*	@Override
+	public String toString() {
+	    return super.toString() + 
+	           " | Empleado: { " +
+	           "Salario: " + salario + "€" +
+	           ", Dpto: " + dpto + 
+	           ", Alta: " + fecha_alta + 
+	           ", SSN: '" + ssn + "' }";
+	}
+*/
 }
