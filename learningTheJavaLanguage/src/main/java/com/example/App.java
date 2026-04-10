@@ -1,16 +1,22 @@
 package com.example;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 public class App {
 	
     public static void main(String[] args) {
+    	Empleado empleado1 = new Empleado();
+    	Empleado empleado2 = new Empleado(3600.00, Dpto.CONTABILIDAD, LocalDate.of(2026, Month.MAY, 22));
+    	empleado1.setNombre("Jeronimo");
     	
-    	Persona persona1 = new Persona();
-    	persona1.setNombre("Jerónimo");
-    	persona1.setPrimerApellido("Arenal");
-    	persona1.setSegundoApellido("Gómez");
+    	System.out.println(empleado1);
     	
-    	System.out.print("Me llamo " + persona1.getNombre() +' ' + persona1.getPrimerApellido() + ' ' +
-    			persona1.getSegundoApellido()); 
+    	Empleado empleado3 = new Empleado("Juan", "Martínez", "Lopez", Genero.MASCULINO, 
+    			LocalDate.of(2026, Month.MAY, 22), 5000.0, Dpto.FINANZAS, 
+    			LocalDate.of(2026,Month.APRIL, 12));
+    	
+    	System.out.print(empleado3);
 
     }
 }
