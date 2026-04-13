@@ -10,7 +10,7 @@ public class App {
     	Empleado empleado = Empleado.builder()
 	            .salario(2750.0)
 	            .dpto(Dpto.CONTABILIDAD)
-	            .fecha_alta(LocalDate.now())
+	            .fecha_alta(LocalDate.of(2000, Month.MAY, 22))
 	            .ssn("123-456-789")
 	            .build();
     	
