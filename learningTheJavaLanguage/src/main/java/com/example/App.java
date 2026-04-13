@@ -31,7 +31,7 @@ public class App {
     	numeros2 = Arrays.copyOf(numeros2, 13);
     	System.out.println("EL array tiene: " + numeros2.length);
     	
-        System.out.println("--------------------------------------------------");
+        System.out.println("---------------- Empezamos con el Array de Personas ----------------------------------");
     	
     	
     	Persona[] personas = {
@@ -83,7 +83,6 @@ public class App {
     	
         // 1. Mostrar cuántas personas hay usando .length
         System.out.println("Total de personas en el array: " + personas.length);
-        System.out.println("--------------------------------------------------");
 
         // 2. Imprimir todos los nombres y salarios con un bucle for-each
         for (Persona p : personas) {
