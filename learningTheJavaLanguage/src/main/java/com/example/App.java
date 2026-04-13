@@ -31,61 +31,66 @@ public class App {
     	numeros2 = Arrays.copyOf(numeros2, 13);
     	System.out.println("EL array tiene: " + numeros2.length);
     	
-    	Persona persona1 = null;
-    	Persona persona2 = null;
-    	Persona persona3 = null;
-    	Persona persona4 = null;
-    	Persona persona5 = null;
+        System.out.println("--------------------------------------------------");
     	
-    	persona1 = Persona.builder()
-    			.nombre("Jorge")
-    			.primerApellido("Pascual")
-    			.segundoApellido("Ramirez")
-    			.genero(Genero.MASCULINO)
-    			.fechaNacimiento(LocalDate.of(1995, Month.JANUARY, 10))
-    			.salario(3500.50)
-    			.build();
-    	persona2 = Persona.builder()
-    			.nombre("Sebastian")
-    			.primerApellido("Sanjuanelo")
-    			.segundoApellido("Arrieta")
-    			.genero(Genero.MASCULINO)
-    			.fechaNacimiento(LocalDate.of(200, Month.DECEMBER, 1))
-    			.salario(2450.70)
-    			.build();
-    	
-    	persona3 = Persona.builder()
-    			.nombre("Alex Eduardo")
-    			.primerApellido("Pilicita")
-    			.segundoApellido("Changoluisa")
-    			.genero(Genero.MASCULINO)
-    			.fechaNacimiento(LocalDate.of(1997, Month.SEPTEMBER, 11))
-    			.salario(4800.46)
-    			.build();
-    	
-    	persona4 = Persona.builder()
-    			.nombre("Javier")
-    			.primerApellido("Jurado")
-    			.segundoApellido("Mran")
-    			.genero(Genero.MASCULINO)
-    			.fechaNacimiento(LocalDate.of(2005, Month.OCTOBER, 25))
-    			.salario(4500.50)
-    			.build();
-    	
-    	persona5 = Persona.builder()
-    			.nombre("Rodrigo")
-    			.primerApellido("Rivero")
-    			.segundoApellido("Fernández")
-    			.genero(Genero.MASCULINO)
-    			.fechaNacimiento(LocalDate.of(1992, Month.NOVEMBER, 4))
-    			.salario(3760.40)
-    			.build();
     	
     	Persona[] personas = {
-    		    Persona.builder().nombre("Juan").primerApellido("García").build(),
-    		    Persona.builder().nombre("Ana").salario(2500.0).build(),
-    		    Persona.builder().nombre("Luis").genero(Genero.MASCULINO).build()
-    		};
+                Persona.builder()
+                    .nombre("Jorge")
+                    .primerApellido("Pascual")
+                    .segundoApellido("Ramirez")
+                    .genero(Genero.MASCULINO)
+                    .fechaNacimiento(LocalDate.of(1995, Month.JANUARY, 10))
+                    .salario(3500.50)
+                    .build(),
+                
+                Persona.builder()
+                    .nombre("Sebastian")
+                    .primerApellido("Sanjuanelo")
+                    .segundoApellido("Arrieta")
+                    .genero(Genero.MASCULINO)
+                    .fechaNacimiento(LocalDate.of(2000, Month.DECEMBER, 1)) // Corregido el año
+                    .salario(2450.70)
+                    .build(),
+                
+                Persona.builder()
+                    .nombre("Alex Eduardo")
+                    .primerApellido("Pilicita")
+                    .segundoApellido("Changoluisa")
+                    .genero(Genero.MASCULINO)
+                    .fechaNacimiento(LocalDate.of(1997, Month.SEPTEMBER, 11))
+                    .salario(4800.46)
+                    .build(),
+                
+                Persona.builder()
+                    .nombre("Javier")
+                    .primerApellido("Jurado")
+                    .segundoApellido("Mran")
+                    .genero(Genero.MASCULINO)
+                    .fechaNacimiento(LocalDate.of(2005, Month.OCTOBER, 25))
+                    .salario(4500.50)
+                    .build(),
+                
+                Persona.builder()
+                    .nombre("Rodrigo")
+                    .primerApellido("Rivero")
+                    .segundoApellido("Fernández")
+                    .genero(Genero.MASCULINO)
+                    .fechaNacimiento(LocalDate.of(1992, Month.NOVEMBER, 4))
+                    .salario(3760.40)
+                    .build()
+            };
+    	
+        // 1. Mostrar cuántas personas hay usando .length
+        System.out.println("Total de personas en el array: " + personas.length);
+        System.out.println("--------------------------------------------------");
+
+        // 2. Imprimir todos los nombres y salarios con un bucle for-each
+        for (Persona p : personas) {
+            System.out.println("Empleado: " + p.getNombre() + " " + p.getPrimerApellido() 
+                               + " | Salario: " + p.getSalario() + "€");
+        }
+
     	  
 
     }
