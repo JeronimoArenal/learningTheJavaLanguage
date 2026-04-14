@@ -6,6 +6,8 @@ import java.util.Arrays;
 
 public class App {
 	
+	static final int TOTAL_ELEMENTOS = 10;
+	
     public static void main(String[] args) {
     	/* ARRAY
     	 * Es una variable de referencia que apunta a una zona de la RAM, donde se almacena un conjunto de valores 
@@ -17,7 +19,6 @@ public class App {
     	
     	// Array de numero primitivos
     	int[] numeros = {1, 2, 3, 4, 5};
-    	
     	//Creamos Array reservando memoria
     	int[] numeros2 = new int[10];
     	    	
@@ -81,16 +82,49 @@ public class App {
                     .build()
             };
     	
-        // 1. Mostrar cuántas personas hay usando .length
-        System.out.println("Total de personas en el array: " + personas.length);
-
-        // 2. Imprimir todos los nombres y salarios con un bucle for-each
-        for (Persona p : personas) {
-            System.out.println("Empleado: " + p.getNombre() + " " + p.getPrimerApellido() 
-                               + " | Salario: " + p.getSalario() + "€");
-        }
-
-    	  
+    	
+    	operatorsInt();
+    	prePost();
+    	postPre();
+    	
 
     }
+    
+    public static void operatorsInt(){
+    	/* OPERADORES
+    	 *  Operadores Aritméticos, que son: +, -, *, /, %
+    	 *  De los anteriores operadores vamos a ejemplificar el operador %(modulus) devuelve el residuo de la división.
+    	 *  Utilizaremos la sentencia "for" para recorrer un array, primero la sentencia clásica y la mejorada.
+    	 */
+    	
+    	//1- Declarar u array de 100 elementos
+    	//2- Agregar valores al array
+    	//3- Recorrer el array y solamente mostrar los elementos que sean pares
+    	
+    	int[] numerosEnteros = new int[TOTAL_ELEMENTOS];
+    	
+    	// i++ (primero se usa el valor actual de la variable y después se le suma 1)
+    	// ++i (primero se le suma 1 a la variable y después se usa el nuevo valor)
+    	
+    	for(int i = 0; i < TOTAL_ELEMENTOS; i++) {
+    		  numerosEnteros[i] = i + 1; 
+    		  System.out.println("Posición " + i + " tiene el valor: " + numerosEnteros[i]);
+    	}
+    	
+    }
+
+    
+    public static void prePost() {
+    	int a = 10;
+    	int b = a++;
+    	
+    	System.out.println("a: " + a + " b: " + b );
+    }
+    
+    public static void postPre() {
+    	int a = 10;
+    	int b = ++a;
+    	
+    	System.out.println("a: " + a + " b: " + b );
+    } 
 }
