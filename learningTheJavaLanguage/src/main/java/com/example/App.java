@@ -14,7 +14,18 @@ public class App {
     	 * del mismo tipo. Cuando se crea, se fija la longitud y no se puede modificar su tamaño (inmutable), 
     	 * aunque si sus elementos. Para acceder a los elementos se utiliza un indice entre corchetes con inicio en 0.
     	 */
+    	    	
+        mainArray();  	
+        arrayPersonas();
+    	operatorsInt();
+    	prePost();
+    	postPre();
     	
+    }
+    
+	// .......................... M E T H O D S ..............................................
+    
+    public static void mainArray(){
     	String[] nombres = {"Carolina", "Jorge", "Daniel"};
     	
     	// Array de numero primitivos
@@ -32,8 +43,10 @@ public class App {
     	numeros2 = Arrays.copyOf(numeros2, 13);
     	System.out.println("EL array tiene: " + numeros2.length);
     	
-        System.out.println("---------------- Empezamos con el Array de Personas ----------------------------------");
+    }
+    public static void arrayPersonas(){
     	
+    System.out.println("---------------- Empezamos con el Array de Personas ----------------------------------");	    	
     	
     	Persona[] personas = {
                 Persona.builder()
@@ -81,15 +94,9 @@ public class App {
                     .salario(3760.40)
                     .build()
             };
-    	
-    	
-    	operatorsInt();
-    	prePost();
-    	postPre();
-    	
 
+    	
     }
-    
     public static void operatorsInt(){
     	/* OPERADORES
     	 *  Operadores Aritméticos, que son: +, -, *, /, %
