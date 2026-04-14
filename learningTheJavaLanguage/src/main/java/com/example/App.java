@@ -15,13 +15,11 @@ public class App {
     	 * aunque si sus elementos. Para acceder a los elementos se utiliza un indice entre corchetes con inicio en 0.
     	 */
     	
-    	    	
         mainArray();  	
         arrayPersonas();
     	operatorsInt();
     	prePost();
     	postPre();
-    	
     	
     }
     
@@ -123,20 +121,40 @@ public class App {
     	
     	System.out.println(" ------------------- For mejorado ------------------");
     	for(int numeroEntero : numerosEnteros) {
-    		System.out.println(numeroEntero);
+    		System.out.println("Número: " + numeroEntero);
     		
     	}
+    	
+        
+        // 1º Comitear los cambios actuales del proyecto poniendo como comentario: "antes de realizar el ejercicio3"
+        // 2º Utilizando un bucle for mejorado, que muestre los elementos que son impares del array numerosEnteros y
+        //contando la cantidad de numeros impares:
+    	
+        
+        // EJERCICIO 3
+    	
+    	System.out.println(" ------------------- For mejorado Impares ------------------");
+    	
+    	int contador = 0;
+
+    	for(int numeroEntero : numerosEnteros) {
+    	    if (numeroEntero % 2 != 0) {
+    	        System.out.println("Número impar: " + numeroEntero);
+    	        contador++;
+    	    }
+    	}
+    	System.out.println("Total números impares: " + contador);
     	
     	System.out.println(" ------------------- Numeros Pares ------------------");
     	
     	for(int i = 0; i < TOTAL_ELEMENTOS; i++) {
-    	    // Verificamos si es par (resto de la división entre 2 es 0)
+    	    // Verificamos si es impar (el resto de la división entre 2 NO es 0)
     	    if (numerosEnteros[i] % 2 == 0) {
-    	        System.out.println("Posición " + i + " tiene el valor par: " + numerosEnteros[i]);
+    	        System.out.println("Posición " + i + " tiene el valor impar: " + numerosEnteros[i]);
     	    }
     	}
-    }
-    
+    	
+    } 
 
     
     public static void prePost() {
@@ -151,5 +169,6 @@ public class App {
     	int b = ++a;
     	
     	System.out.println("a: " + a + " b: " + b );
-    } 
+    }    
+    
 }
