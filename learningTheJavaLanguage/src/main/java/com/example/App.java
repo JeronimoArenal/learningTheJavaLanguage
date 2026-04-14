@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class App {
 	
-	static final int TOTAL_ELEMENTOS = 10;
+	static final int TOTAL_ELEMENTOS = 100;
 	
     public static void main(String[] args) {
     	/* ARRAY
@@ -14,12 +14,14 @@ public class App {
     	 * del mismo tipo. Cuando se crea, se fija la longitud y no se puede modificar su tamaño (inmutable), 
     	 * aunque si sus elementos. Para acceder a los elementos se utiliza un indice entre corchetes con inicio en 0.
     	 */
+    	
     	    	
         mainArray();  	
         arrayPersonas();
     	operatorsInt();
     	prePost();
     	postPre();
+    	
     	
     }
     
@@ -35,8 +37,8 @@ public class App {
     	    	
     	System.out.println(Arrays.toString(nombres));
     	System.out.println(Arrays.toString(numeros));
-    	System.out.println("EL array tiene: " + numeros.length);
-    	System.out.println("EL array tiene: " + numeros2.length);
+    	System.out.println("EL array tiene una logitud de: " + numeros.length);
+    	System.out.println("EL array tiene una logitud de: " + numeros2.length);
     	
     	// 2. Modificamos el array a 13
     	// Esto crea el nuevo, copia los 10 viejos y los guarda en la misma variable
@@ -44,6 +46,7 @@ public class App {
     	System.out.println("EL array tiene: " + numeros2.length);
     	
     }
+    
     public static void arrayPersonas(){
     	
     System.out.println("---------------- Empezamos con el Array de Personas ----------------------------------");	    	
@@ -95,8 +98,8 @@ public class App {
                     .build()
             };
 
-    	
     }
+    
     public static void operatorsInt(){
     	/* OPERADORES
     	 *  Operadores Aritméticos, que son: +, -, *, /, %
@@ -118,7 +121,22 @@ public class App {
     		  System.out.println("Posición " + i + " tiene el valor: " + numerosEnteros[i]);
     	}
     	
+    	System.out.println(" ------------------- For mejorado ------------------");
+    	for(int numeroEntero : numerosEnteros) {
+    		System.out.println(numeroEntero);
+    		
+    	}
+    	
+    	System.out.println(" ------------------- Numeros Pares ------------------");
+    	
+    	for(int i = 0; i < TOTAL_ELEMENTOS; i++) {
+    	    // Verificamos si es par (resto de la división entre 2 es 0)
+    	    if (numerosEnteros[i] % 2 == 0) {
+    	        System.out.println("Posición " + i + " tiene el valor par: " + numerosEnteros[i]);
+    	    }
+    	}
     }
+    
 
     
     public static void prePost() {
