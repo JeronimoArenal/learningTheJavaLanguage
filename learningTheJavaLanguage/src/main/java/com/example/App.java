@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.Arrays;
 
+import lombok.EqualsAndHashCode;
+
 public class App {
 	
 	static final int TOTAL_ELEMENTOS = 10;
@@ -29,12 +31,13 @@ public class App {
         //arrayPersonas();
     	//prePost();
     	//postPre();
-    	asignacion();
-    	
-    	/*SENTENCIA DE ASIGNACION COMPUESTA
-    	 */
+    	//asignacion();
+    	ternary();
     	
     }
+    
+	
+	/*SENTENCIA DE ASIGNACION COMPUESTA */
     
     public static void asignacion(){
     	//La expresión siguiente se promueve al tipo de dato int, que no se puede almacenar, 
@@ -42,12 +45,33 @@ public class App {
     	byte a = 10;
     	short b = 10;
     	b = (short) (a+b); //El resultado es un int pero se convierte a short para poder guardar en la variable b.
-    	 
+    	
     	 //El Casting debe evitarse, por lo que utilizaremos sentencias de asignacion compuesta, con el mismo resultado.
     	 b += a;
     	 System.out.print(b);
     	
     }
+    
+    /* OPERADOR TERNARIO 
+     * https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html
+     * Trabaja con 3 operadores y es una alternativa al if-else
+     * Las 3 partes que la conmpoenen es: CONDICION ? EXPRESION 1(valor si true) : EXPRESION "(valor si false).
+     *  Por lo que el resultado siempre es un true o false
+     * */
+    public static void ternary() {
+    	String n1 = "Juan";
+    	
+    	String resultado = n1.equals("Pepe") ? "Si n1 teine el valor de Pepe" : "No n1 no tiene el valor de Pepe";
+    	System.out.println(resultado);
+    	
+    	byte a = 10;
+    	short b = 10;
+    	int resultado1 = b > a && n1.equals("Pepe") || b < (a*25) && b != 15 ? 10 : 50;
+    	
+    	System.out.println(resultado1);
+    }
+    
+    
     // .................... Método crearYLlenar metodo sin void por lo que devuelve array de enteros ..............................................
     public static int[] rellenarArray() {
         int[] numerosEnteros = new int[TOTAL_ELEMENTOS]; //Reservamos espacio en RAM para las cantidad TOTAL_ELEMENTOS
