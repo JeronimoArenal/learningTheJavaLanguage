@@ -4,29 +4,9 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.Arrays;
 
-import lombok.EqualsAndHashCode;
 
 public class App {
-
-	/*Este método recibe un object y depediendo de si es Empleado o totalde asignaturas si se trata de Estudiante */
-	static void printObject(Object object) {
 		
-		if(object instanceof Empleado) {
-			
-			Empleado empleado = (Empleado) object;
-			System.out.println("EL salario es: " + empleado.getSalario());
-			
-		} else if (object instanceof Estudiante){
-			
-			Estudiante estudiante = (Estudiante) object;
-			System.out.println("Total asignaturas: " + estudiante.getTotalAsignaturas());
-			
-		} else {
-			System.out.println("Es algun otro ente del espectro ");
-		}
-	}
-	
-	
 	// .......................... Método main .......................................
     public static void main(String[] args) {   	
     	
@@ -40,14 +20,51 @@ public class App {
     	Empleado emp1 = new Empleado();
     	emp1.setSalario(3450.25);
     	
-    	//Incocamos (llamamos) al método
+    	//Invocamos (llamamos) al método retornando void
     	printObject(p1);
     	printObject(e1);
     	printObject(emp1);
-
+   	
+        // Utilizamos método con return  resultado String, debes imprimirlo:
+    	System.out.println("..... Imprimimos con metodo con return ..............");
+        System.out.println(printObjecto(p1));
+        System.out.println(printObjecto(e1));
+        System.out.println(printObjecto(emp1));
     	
     }
     
+	/*Este método sin retorno, recibe un object y depediendo de si es Empleado o totalde asignaturas si se trata de Estudiante */
+	static void printObject(Object object) {
+		
+		if(object instanceof Empleado) {
+			Empleado empleado = (Empleado) object;
+			System.out.println("EL salario es: " + empleado.getSalario());
+			
+		} else if (object instanceof Estudiante){
+			Estudiante estudiante = (Estudiante) object;
+			System.out.println("Total asignaturas: " + estudiante.getTotalAsignaturas());
+			
+		} else {
+			System.out.println("Es algun otro ente del espectro ");
+		}
+	}
+	
+	/*El mismo metodo con retorno. */	
+	static String printObjecto(Object object) {
+		
+	    if(object instanceof Empleado) {
+	        Empleado empleado = (Empleado) object;
+	        return "El salario es: " + empleado.getSalario(); // <-- return
+	        
+	    } else if (object instanceof Estudiante){
+	        Estudiante estudiante = (Estudiante) object;
+	        return "Total asignaturas: " + estudiante.getTotalAsignaturas(); // <-- return
+	        
+	    } else {
+	        return "Es algun otro ente del espectro"; // <-- return
+	    }
+	}
+	
     
 	// .......................... M E T H O D S ..............................................      
     /* instanceof, se utiliza para saber si una variable de referencia o de un objeto es una instancia de un tipo
