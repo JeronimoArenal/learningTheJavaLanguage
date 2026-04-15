@@ -19,19 +19,35 @@ public class App {
     	 * aunque si sus elementos. Para acceder a los elementos se utiliza un indice entre corchetes con inicio en 0.
     	 */
     	
-    	int[] miArray = rellenarArray();	//Variable local para guaradar el retiurn del método
+    	//int[] miArray = rellenarArray();	//Variable local para guaradar el retiurn del método
     	    	
-    	operatorsInt();
-    	operatorsInt(miArray);
-    	forMejorado();
-    	forMejorado(miArray);
+    	//operatorsInt();
+    	//operatorsInt(miArray);
+    	//forMejorado();
+    	//forMejorado(miArray);
         //mainArray();  	
         //arrayPersonas();
     	//prePost();
     	//postPre();
+    	asignacion();
+    	
+    	/*SENTENCIA DE ASIGNACION COMPUESTA
+    	 */
     	
     }
     
+    public static void asignacion(){
+    	//La expresión siguiente se promueve al tipo de dato int, que no se puede almacenar, 
+    	//por lo que hay que hacer casting a tipo de dato primitivo short.
+    	byte a = 10;
+    	short b = 10;
+    	b = (short) (a+b); //El resultado es un int pero se convierte a short para poder guardar en la variable b.
+    	 
+    	 //El Casting debe evitarse, por lo que utilizaremos sentencias de asignacion compuesta, con el mismo resultado.
+    	 b += a;
+    	 System.out.print(b);
+    	
+    }
     // .................... Método crearYLlenar metodo sin void por lo que devuelve array de enteros ..............................................
     public static int[] rellenarArray() {
         int[] numerosEnteros = new int[TOTAL_ELEMENTOS]; //Reservamos espacio en RAM para las cantidad TOTAL_ELEMENTOS
