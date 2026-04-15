@@ -4,12 +4,11 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.Arrays;
 
-
 public class App {
+	
 		
 	// .......................... Método main .......................................
-    public static void main(String[] args) {   	
-    	
+    public static void main(String[] args) {
         //arrayPersonas();
     	
     	Persona p1 = new Persona();
@@ -20,12 +19,12 @@ public class App {
     	Empleado emp1 = new Empleado();
     	emp1.setSalario(3450.25);
     	
-    	//Invocamos (llamamos) al método retornando void
+    	//Invocamos (llamamos) al método sin retorno void
     	printObject(p1);
     	printObject(e1);
     	printObject(emp1);
    	
-        // Utilizamos método con return  resultado String, debes imprimirlo:
+        // Utilizamos método con return de tipo String
     	System.out.println("..... Imprimimos con metodo con return ..............");
         System.out.println(printObjecto(p1));
         System.out.println(printObjecto(e1));
@@ -49,15 +48,16 @@ public class App {
 		}
 	}
 	
-	/*El mismo metodo con retorno. */	
-	static String printObjecto(Object object) {
+	/*El mismo metodo con retorno. Utilizando los beneficios de Pattern Matching*/	
+	static String printObjecto(Object obj) {
 		
-	    if(object instanceof Empleado) {
-	        Empleado empleado = (Empleado) object;
+	    if(obj instanceof Empleado empleado) {
+	        //Empleado empleado = (Empleado) object;
+	        
 	        return "El salario es: " + empleado.getSalario(); // <-- return
 	        
-	    } else if (object instanceof Estudiante){
-	        Estudiante estudiante = (Estudiante) object;
+	    } else if (obj instanceof Estudiante estudiante){
+	        //Estudiante estudiante = (Estudiante) object;
 	        return "Total asignaturas: " + estudiante.getTotalAsignaturas(); // <-- return
 	        
 	    } else {
