@@ -57,21 +57,23 @@ public class App {
      * Trabaja con 3 operadores y es una alternativa al if-else
      * Las 3 partes que la conmpoenen es: CONDICION ? EXPRESION 1(valor si true) : EXPRESION "(valor si false).
      *  Por lo que el resultado siempre es un true o false
-     * */
+     */
+    
     public static void ternary() {
-    	String n1 = "Juan";
+    	String n1 = "Pepe";
     	
     	String resultado = n1.equals("Pepe") ? "Si n1 teine el valor de Pepe" : "No n1 no tiene el valor de Pepe";
     	System.out.println(resultado);
     	
     	byte a = 10;
     	short b = 10;
+    	b += a;
+    	
     	int resultado1 = b > a && n1.equals("Pepe") || b < (a*25) && b != 15 ? 10 : 50;
     	
     	System.out.println(resultado1);
     }
-    
-    
+        
     // .................... Método crearYLlenar metodo sin void por lo que devuelve array de enteros ..............................................
     public static int[] rellenarArray() {
         int[] numerosEnteros = new int[TOTAL_ELEMENTOS]; //Reservamos espacio en RAM para las cantidad TOTAL_ELEMENTOS
