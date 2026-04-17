@@ -24,28 +24,30 @@ public class Persona {
 	 */
 	
 	public static final String Pais = "España";
+	
 	private String nombre;
 	private String primerApellido;
 	private String segundoApellido;
 	private Genero genero;
 	private LocalDate fechaNacimiento;
+	
+	
+	
+	//................... M E T H O D S ............................................
 
 	
 	//......................... Constructor ............................
-
-  
   @Override
   public String toString() {
-      String res = "Persona [";
+      String pers = "Persona: ";
 
-      if (nombre != null) res += "nombre: " + nombre + ", ";
-      if (primerApellido != null) res += "primerApellido: " + primerApellido + ", ";
-      if (segundoApellido != null) res += "segundoApellido" + segundoApellido + ", ";
-      if (genero != null) res += "genero: " + genero + ", ";
-      if (fechaNacimiento != null) res += "fechaNacimiento: " + fechaNacimiento + ", ";
+      if (nombre != null) pers += "nombre: " + nombre + ", ";
+      if (primerApellido != null) pers += "primerApellido: " + primerApellido + ", ";
+      if (segundoApellido != null) pers += "segundoApellido: " + segundoApellido + ", ";
+      if (genero != null) pers += "genero: " + genero + ", ";
+      if (fechaNacimiento != null) pers += "fechaNacimiento: " + fechaNacimiento + ", ";
 
-      return res + "]";
+      return pers ;
   }	
-	
 
 }

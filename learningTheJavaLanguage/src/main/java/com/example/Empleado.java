@@ -16,45 +16,35 @@ import lombok.experimental.SuperBuilder;
  */
 @Getter @Setter 
 @EqualsAndHashCode(callSuper = false)
-@ToString(callSuper = true)
+//@ToString(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
-public class Empleado extends Persona{
+public class Empleado extends Persona implements Identificador{
 	
 	private double salario;
 	private Dpto dpto;
 	private LocalDate fecha_alta;
 	private String ssn;
 	
-	//............................. Constructors ...................................
 	
-	/*
+	//................... M E T H O D S ............................................
+	@Override
+	public String obtenerIdentificacion() {
+		return "ID de Empleado - SSN: " + ssn;
+	}
+	
+	//.................................. toString ..........................................
 	@Override
 	public String toString() {
-	    // 1. Traemos lo que dice el padre: "Persona [nombre=Juan...]"
-	    String infoPadre = super.toString();
-
-	    // 2. Le quitamos el último carácter (el ']') para poder seguir escribiendo dentro
-	    String sinCierre = infoPadre.substring(0, infoPadre.length() - 1);
-
-	    // 3. Le añadimos los datos propios de Empleado y cerramos el corchete
-	    return sinCierre + 
-	           ", salario=" + salario + 
-	           ", dpto=" + dpto + 
-	           ", fecha_alta=" + fecha_alta + "]";
-	}
-	*/
-
-	//.................................. toString ..........................................
-/*	@Override
-	public String toString() {
 	    return super.toString() + 
-	           " | Empleado: { " +
+	           " |Empleado: " +
 	           "Salario: " + salario + "€" +
 	           ", Dpto: " + dpto + 
 	           ", Alta: " + fecha_alta + 
-	           ", SSN: '" + ssn + "' }";
+	           ", SSN: '" + ssn + "' ";
 	}
-*/
+
+
+
 }
